@@ -6,17 +6,35 @@
 
 <script>
 export default {
-  name: 'App'
-}
+  data() {
+    return {};
+  }
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+  overflow-y: scroll;
+}
+ul,
+ol,
+dl {
+  list-style: none;
+}
+a {
+  text-decoration: none;
 }
 </style>

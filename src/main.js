@@ -4,6 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './vuex/store'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import popTo from "./components/public/pop"
+import Loading from "./components/public/loading"
+
+Vue.use(popTo);
+Vue.use(Loading);
+axios.defaults.withCredentials = true
+Vue.prototype.$axios = axios
+window.axios = axios
+Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 

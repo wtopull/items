@@ -1,5 +1,5 @@
 export default {
   login: ({
     commit
-  }) => commit('login'),
+  }) => commit('login')
 }
