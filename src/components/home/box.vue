@@ -1,9 +1,7 @@
 <template>
   <div class="box">
     <heads></heads>
-    <contnets>
-      <router-view />
-    </contnets>
+    <contnets></contnets>
     <foots></foots>
   </div>
 </template>

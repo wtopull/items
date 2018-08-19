@@ -15,7 +15,13 @@ export default new Router({
       path: '/',
       name: 'box',
       component: box,
-      children: [{
+      children: [
+        {
+          path: 'home',
+          name: 'home',
+          component: home
+        },
+        {
           path: 'movie',
           name: 'movie',
           component: movie
