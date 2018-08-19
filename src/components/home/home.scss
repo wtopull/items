@@ -1,0 +1,23 @@
+.home {
+  >ul {
+    & li {
+      height: 180px;
+      & img {
+        width: 100%;
+        height: 180px;
+        background-size: 100% 100%;
+      }
+    }
+  }
+  & div {
+    & h3 {
+      height: 36px;
+      line-height: 36px;
+      border-bottom: 1px solid #ddd;
+      background: #ddd;
+    }
+    & ul {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}

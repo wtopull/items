@@ -1,5 +1,5 @@
 <template>
-    <div class="movie">movie</div>
+    <div class="movie overflow">movie</div>
 </template>
 
 <script>
@@ -7,7 +7,6 @@ export default {
 
 }
 </script>
-
-<style>
-
+<style lang='scss' scoped>
+@import './movie.scss'
 </style>
