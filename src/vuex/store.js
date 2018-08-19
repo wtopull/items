@@ -8,7 +8,8 @@ Vue.use(Vuex)
 const state = {
   loginstaus: localStorage.getItem('loginstaus'),
   username: 'test',
-  password: '1121'
+  password: '1121',
+  navNum:'首页'
 }
 
 export default new Vuex.Store({

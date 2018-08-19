@@ -2,12 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import '@/assets/iconfont/iconfont.css'
 import router from './router'
 import store from './vuex/store'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import popTo from "./components/public/pop"
 import Loading from "./components/public/loading"
+import i18n from './i18n/i18n'
 
 Vue.use(popTo);
 Vue.use(Loading);
@@ -23,6 +25,7 @@ new Vue({
   el: '#app',
   router,
   store,
+  i18n,
   components: { App },
   template: '<App/>'
 })

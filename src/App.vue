@@ -18,7 +18,7 @@ export default {
   padding: 0px;
 }
 html,
-body {
+body,#app {
   width: 100%;
   height: 100%;
 }

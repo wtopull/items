@@ -1,0 +1,19 @@
+.footer {
+  height: 46px;
+  width: 100%;
+  background: #FFD200;
+  & .footerNav {
+    height: 46px;
+    width: 100%;
+    & li {
+      width: 25%;
+      height: 46px;
+      line-height: 46px;
+      float: left;
+      text-align: center;
+    }
+    & li.active {
+      background: #ddd;
+    }
+  }
+}

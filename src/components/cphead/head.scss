@@ -1,0 +1,27 @@
+.head {
+  height: 46px;
+  line-height: 46px;
+  width: 100%;
+  background: #FFD200;
+  text-align: center;
+  & .headTitle {
+    height: 46px;
+    width: 100%;
+    & li {
+      float: left;
+      height: 100%;
+    }
+    & li:nth-child(1) {
+      width: 15%;
+      & i {
+        font-size: 24px;
+      }
+    }
+    & li:nth-child(2) {
+      width: 70%;
+    }
+    & li:nth-child(3) {
+      width: 15%;
+    }
+  }
+}

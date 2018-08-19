@@ -159,3 +159,9 @@
 
 	this.$pop.show({title:'温馨提示',content:'已经到底啦',content1:String(this.seasonId),content2:String(Number(this.seasonId)+1),number:3});
 
+# 国际化 #
+
+	npm install vue-i18n --save
+	
+	{{$t('navs.Home')}}
+	{{$t('navbar[1].children[0].component')}}
