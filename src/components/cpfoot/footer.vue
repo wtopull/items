@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <ul class="footerNav">
-      <li :class=" {'active': item == navNum}" v-for="(item,index) in $t('navs')" :key="index" @click="change(index,item)">{{item}}</li>
+      <li :class=" {'active': item == navNum}" v-for="(item,index) in $t('navs')" :key="index" @click="change(item)">{{item}}</li>
       <!-- <router-link :class="{'active': item == navNum}" v-for="(item,index) in $t('navs')" :key="index" :to="routerTo" tag='li' @click="change(index,item)">{{item}}</router-link> -->
     </ul>
   </div>
@@ -18,9 +18,7 @@ export default {
     // this.navNum = this.$store.state.navNum;
   },
   methods: {
-    change(index, item) {
-      // this.navNum = item;
-      console.log(item)
+    change(item) {
       if (item === "首页" || item === "Home" || item === "トップページ") {
         this.routerTo = "home";
         this.navNum = item;

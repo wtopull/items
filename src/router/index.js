@@ -4,6 +4,11 @@ import login from '@/components/login/login.vue'
 import home from '@/components/home/home.vue'
 import box from '@/components/home/box.vue'
 import movie from '@/components/movie/movie.vue'
+import listm from '@/components/movie/listm.vue'
+import listt from '@/components/movie/listt.vue'
+import listc from '@/components/movie/listc.vue'
+import listp from '@/components/movie/listp.vue'
+import listv from '@/components/movie/listv.vue'
 import music from '@/components/music/music.vue'
 import my from '@/components/my/my.vue'
 
@@ -24,7 +29,35 @@ export default new Router({
         {
           path: 'movie',
           name: 'movie',
-          component: movie
+          redirect:'/listm',
+          component: movie,
+          children:[
+            {
+              path:'/listm',
+              name:'listm',
+              component:listm
+            },
+            {
+              path:'/listt',
+              name:'listt',
+              component:listt
+            },
+            {
+              path:'/listc',
+              name:'listc',
+              component:listc
+            },
+            {
+              path:'/listp',
+              name:'listp',
+              component:listp
+            },
+            {
+              path:'/listv',
+              name:'listv',
+              component:listv
+            },
+          ]
         },
         {
           path: 'music',

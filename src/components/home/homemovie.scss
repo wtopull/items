@@ -1,10 +1,9 @@
-.homeMovie {
+.homeMovie,.listm,.listt,.listc,.listp,.listv {
   width: 100%;
   & ul {
     width: 100%;
     & li {
       position: relative;
-      z-index: 100;
       width: calc(33% - 8px);
       height: 92px;
       float: left;
@@ -38,11 +37,11 @@
       & div.homeMoviePop {
         position: absolute;
         left: 0px;
-        top: 0px;
+        top: 101px;
         z-index: 101;
-        width: 100%;
-        height: 100%;
-        background:rgba(0, 0, 0, 0.4);
+        width: calc(100% + 50%);
+        height: calc(100% + 40%);
+        background:#fff;
         overflow: hidden;
       }
     }

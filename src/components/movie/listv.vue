@@ -1,6 +1,5 @@
 <template>
-  <div class="homeMovie">
-    <h3>{{$t('home.hmovie')}}</h3>
+  <div class="listv">
     <ul>
       <li v-for="(item,index) in moviedoc" :key="index">
         <div class="homeMovieDoc">
@@ -96,8 +95,6 @@ export default {
   }
 };
 </script>
-
 <style lang='scss' scoped>
-@import "./home.scss";
-@import "./homemovie.scss";
+@import "../home/homemovie.scss";
 </style>

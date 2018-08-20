@@ -1,6 +1,5 @@
 <template>
-  <div class="homeMovie">
-    <h3>{{$t('home.hmovie')}}</h3>
+  <div class="listt">
     <ul>
       <li v-for="(item,index) in moviedoc" :key="index">
         <div class="homeMovieDoc">
@@ -90,14 +89,15 @@ export default {
   },
   methods: {
     showpop(index, item) {
+      this.moviedoc.map(item =>{
+        console.log(item)
+      })
       item.choose = !item.choose;
       this.showMoviePop = item.choose;
     }
   }
 };
 </script>
-
 <style lang='scss' scoped>
-@import "./home.scss";
-@import "./homemovie.scss";
+@import "../home/homemovie.scss";
 </style>
