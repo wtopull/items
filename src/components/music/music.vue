@@ -1,5 +1,5 @@
 <template>
-    <div class="music">music</div>
+    <div class="music overflow">music</div>
 </template>
 
 <script>
@@ -7,7 +7,6 @@ export default {
 
 }
 </script>
-
-<style>
-
+<style lang='scss' scoped>
+@import './music.scss'
 </style>
