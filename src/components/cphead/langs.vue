@@ -16,7 +16,7 @@ export default {
       langs: [
         { title: "CN", id: "1" },
         { title: "EN", id: "2" },
-        { title: "JP", id: "3" }
+        // { title: "JP", id: "3" }
       ]
     };
   },
