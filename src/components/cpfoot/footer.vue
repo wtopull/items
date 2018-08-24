@@ -1,10 +1,8 @@
-<template>
-  <div class="footer">
-    <ul class="footerNav">
-      <li :class=" {'active': $route.name == index}" v-for="(item,index) in $t('navs')" @click="change(item,index)">{{item}}</li>
-      <!-- <router-link :class="{'active': item == navNum}" v-for="(item,index) in $t('navs')" :key="index" :to="routerTo" tag='li' @click="change(index,item)">{{item}}</router-link> -->
-    </ul>
-  </div>
+<template lang='jade'>
+.footer
+  ul.footerNav
+    li(:class=" {'active': $route.name == index}", v-for="(item,index) in $t('navs')", @click='change(item,index)') {{item}}
+
 </template>
 <script>
 export default {
@@ -15,7 +13,6 @@ export default {
   },
   methods: {
     change(item,index) {
-      console.log(item,index,this.$route.name)
       if (item === "首页" || item === "Home" || item === "トップページ" && this.$route.name === 'home') {
         this.navNum = item;
         this.$router.push("/home");

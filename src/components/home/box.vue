@@ -1,9 +1,8 @@
-<template>
-  <div class="box">
-    <heads></heads>
-    <contnets></contnets>
-    <foots></foots>
-  </div>
+<template lang='jade'>
+.box
+  heads
+  contnets
+  foots
 </template>
 <script>
 import heads from "@/components/cphead/head.vue";

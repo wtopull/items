@@ -1,23 +1,17 @@
-<template>
-  <div class="homeMovie">
-    <h3>{{$t('home.hmovie')}}</h3>
-    <ul>
-      <li v-for="(item,index) in moviedoc" :key="index">
-        <div class="homeMovieDoc">
-          <img class="show" :src="'../../../static/img/'+item.img+'.jpg'">
-          <p @click="showpop(index,item)">
-            <span>{{item.name}}</span>
-            <span>{{item.score}}</span>
-          </p>
-        </div>
-        <div class="homeMoviePop" v-if="item.choose" @click="item.choose = !item.choose">
-          <p>afdsaf</p>
-          <p>afdsaf</p>
-          <p>afdsaf</p>
-        </div>
-      </li>
-    </ul>
-  </div>
+<template lang="jade">
+.homeMovie
+  h3 {{$t('home.hmovie')}}
+  ul
+    li(v-for='(item,index) in moviedoc', :key='index')
+      .homeMovieDoc
+        img.show(:src="'../../../static/img/'+item.img+'.jpg'")
+        p(@click='showpop(index,item)')
+          span {{item.name}}
+          span {{item.score}}
+      .homeMoviePop(v-if='item.choose', @click='item.choose = !item.choose')
+        p afdsaf
+        p afdsaf
+        p afdsaf
 </template>
 <script>
 export default {
