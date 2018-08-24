@@ -1,4 +1,4 @@
-<template>
+<template >
   <div class="head">
     <ul class="headTitle">
       <li><i class="iconfont icon-left"></i></li>
