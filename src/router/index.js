@@ -19,6 +19,7 @@ export default new Router({
   routes: [{
       path: '/',
       name: 'box',
+      redirect:"/home",
       component: box,
       children: [
         {
