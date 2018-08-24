@@ -23,18 +23,17 @@ export default new Router({
       children: [
         {
           path: 'home',
-          name: 'home',
+          name: 'Home',
           component: home
         },
         {
           path: 'movie',
-          name: 'movie',
           redirect:'/listm',
           component: movie,
           children:[
             {
               path:'/listm',
-              name:'listm',
+              name:'Movie',
               component:listm
             },
             {
@@ -61,12 +60,12 @@ export default new Router({
         },
         {
           path: 'music',
-          name: 'music',
+          name: 'Music',
           component: music
         },
         {
           path: 'my',
-          name: 'my',
+          name: 'My',
           component: my
         },
       ]
