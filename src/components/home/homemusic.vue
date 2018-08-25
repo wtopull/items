@@ -4,7 +4,7 @@
     <ul>
       <li v-for="item in musicLists" :key="item.id" @click="toMusic(item)">
         <div class="musicListBox">
-          <p><img :src='"http://qt.dd0519.cn/dist/"+item.img' alt=""></p>
+          <p><img :src='"http://qt.dd0519.cn/"+item.img' alt=""></p>
           <div class="musicListAuth">
             <span>{{item.name}}</span>
             <span>作者：{{item.auth}}</span>

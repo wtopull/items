@@ -1,7 +1,7 @@
 <template>
   <div class="audio">
     <audio controls="controls" >
-      <source :src='"http://qt.dd0519.cn/dist/"+$store.state.link' type="audio/ogg">
+      <source :src='"http://qt.dd0519.cn/"+$store.state.link' type="audio/ogg">
     </audio>
   </div>
 </template>
