@@ -5,6 +5,7 @@ import App from './App'
 //共用样式文件
 import '@/assets/scss/public.css'
 import '@/assets/iconfont/iconfont.css'
+
 import router from './router'
 import store from './vuex/store'
 import axios from 'axios'
@@ -12,8 +13,6 @@ import VueAxios from 'vue-axios'
 import popTo from "./components/public/pop"
 import Loading from "./components/public/loading"
 import i18n from './i18n/i18n'
-
-
 
 Vue.use(popTo);
 Vue.use(Loading);
