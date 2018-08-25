@@ -1,7 +1,7 @@
 <template >
   <div class="head">
     <ul class="headTitle">
-      <li><i class="iconfont icon-left"></i></li>
+      <li><i class="iconfont icon-left" v-if="$route.name !== 'Home'" @click="toHome"></i></li>
       <li><span class="span">{{$t('navs.'+$route.name)}}</span></li>
       <li><langs></langs></li>
     </ul>
@@ -15,6 +15,11 @@ export default {
   },
   components: {
     langs
+  },
+  methods:{
+    toHome(){
+      this.$router.push("/Home");
+    }
   }
 };
 </script>
