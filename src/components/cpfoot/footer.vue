@@ -2,7 +2,6 @@
 .footer
   ul.footerNav
     li(:class=" {'active': $route.name == index}", v-for="(item,index) in $t('navs')", @click='change(item,index)') {{item}}
-
 </template>
 <script>
 export default {

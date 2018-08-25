@@ -1,7 +1,7 @@
 <template>
   <div class="listt">
     <ul>
-      <li v-for="(item,index) in moviedoc" :key="index">
+      <li v-for="(item,index) in moviedocs" :key="index">
         <div class="homeMovieDoc">
           <img class="show" :src="'../../../static/img/'+item.img+'.jpg'">
           <p @click="showpop(index,item)">
@@ -10,88 +10,25 @@
           </p>
         </div>
         <div class="homeMoviePop" v-if="item.choose" @click="item.choose = !item.choose">
-          <p>afdsaf</p>
-          <p>afdsaf</p>
-          <p>afdsaf</p>
+          <p>电视剧</p>
+          <p>电视剧</p>
+          <p>电视剧</p>
         </div>
       </li>
     </ul>
   </div>
 </template>
 <script>
+import {moviedoc} from './movie'
 export default {
   data() {
     return {
       showMoviePop: false,
-      moviedoc: [
-        {
-          name: "上山打虎",
-          score: "9.0分",
-          img: "hot_music_bg_2x",
-          choose: false
-        },
-        {
-          name: "上山打虎",
-          score: "7.0分",
-          img: "hot_music_bg_2x",
-          choose: false
-        },
-        {
-          name: "上山打虎",
-          score: "6.3分",
-          img: "hot_music_bg_2x",
-          choose: false
-        },
-        {
-          name: "上山打虎",
-          score: "9.9分",
-          img: "hot_music_bg_2x",
-          choose: false
-        },
-        {
-          name: "上山打虎",
-          score: "9.0分",
-          img: "hot_music_bg_2x",
-          choose: false
-        },
-        {
-          name: "上山打虎",
-          score: "9.0分",
-          img: "hot_music_bg_2x",
-          choose: false
-        },
-        {
-          name: "上山打虎",
-          score: "9.0分",
-          img: "hot_music_bg_2x",
-          choose: false
-        },
-        {
-          name: "上山打虎",
-          score: "9.0分",
-          img: "hot_music_bg_2x",
-          choose: false
-        },
-        {
-          name: "上山打虎",
-          score: "9.0分",
-          img: "hot_music_bg_2x",
-          choose: false
-        },
-        {
-          name: "上山打虎",
-          score: "9.0分",
-          img: "hot_music_bg_2x",
-          choose: false
-        }
-      ]
+      moviedocs:moviedoc
     };
   },
   methods: {
     showpop(index, item) {
-      this.moviedoc.map(item =>{
-        console.log(item)
-      })
       item.choose = !item.choose;
       this.showMoviePop = item.choose;
     }

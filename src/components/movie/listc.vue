@@ -1,7 +1,7 @@
 <template>
   <div class="listc">
     <ul>
-      <li v-for="(item,index) in moviedoc" :key="index">
+      <li v-for="(item,index) in moviedocs" :key="index">
         <div class="homeMovieDoc">
           <img class="show" :src="'../../../static/img/'+item.img+'.jpg'">
           <p @click="showpop(index,item)">
@@ -10,9 +10,9 @@
           </p>
         </div>
         <div class="homeMoviePop" v-if="item.choose" @click="item.choose = !item.choose">
-          <p>afdsaf</p>
-          <p>afdsaf</p>
-          <p>afdsaf</p>
+          <p>动漫</p>
+          <p>动漫</p>
+          <p>动漫</p>
         </div>
       </li>
     </ul>
@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       showMoviePop: false,
+      moviedocs:moviedoc
     };
   },
   methods: {

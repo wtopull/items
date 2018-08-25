@@ -6,6 +6,7 @@
   </div>
 </template>
 <script>
+import {moviedoc} from './movie'
 export default {
   data() {
     return {
@@ -14,6 +15,9 @@ export default {
   },
   methods: {
     change(item){
+      moviedoc.map(c =>{
+        c.choose = false;
+      })
       if (item === "电影" || item === "Movie" || item === "映画") {
         this.navNum = item;
         this.$router.push("/listm");

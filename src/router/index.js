@@ -39,22 +39,22 @@ export default new Router({
             },
             {
               path:'/listt',
-              name:'listt',
+              name:'Movie',
               component:listt
             },
             {
               path:'/listc',
-              name:'listc',
+              name:'Movie',
               component:listc
             },
             {
               path:'/listp',
-              name:'listp',
+              name:'Movie',
               component:listp
             },
             {
               path:'/listv',
-              name:'listv',
+              name:'Movie',
               component:listv
             },
           ]
