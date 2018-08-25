@@ -9,11 +9,12 @@ import listt from '@/components/movie/listt.vue'
 import listc from '@/components/movie/listc.vue'
 import listp from '@/components/movie/listp.vue'
 import listv from '@/components/movie/listv.vue'
+import video from '@/components/movie/video.vue'
 import music from '@/components/music/music.vue'
+import audio from '@/components/music/audio.vue'
 import my from '@/components/my/my.vue'
 
 Vue.use(Router)
-
 export default new Router({
   mode: 'history',
   routes: [{
@@ -57,12 +58,24 @@ export default new Router({
               name:'Movie',
               component:listv
             },
+            {
+              path:'/video',
+              name:'Movie',
+              component:video
+            },
           ]
         },
         {
           path: 'music',
           name: 'Music',
-          component: music
+          component: music,
+          children:[
+            {
+              path:'/audio',
+              name:'Music',
+              component:audio
+            }
+          ]
         },
         {
           path: 'my',

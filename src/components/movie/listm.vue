@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(item,index) in moviedocs" :key="index">
         <div class="homeMovieDoc">
-          <img class="show" :src="'../../../static/img/'+item.img+'.jpg'">
+          <img class="show" :src="'../../../static/img/'+item.img+'.jpg'" @click="toVideo">
           <p @click="showpop(index,item)">
             <span>{{item.name}}</span>
             <span>{{item.score}}</span>
@@ -28,6 +28,9 @@ export default {
     };
   },
   methods: {
+    toVideo(){
+      this.$router.push("/video");
+    },
     showpop(index, item) {
       item.choose = !item.choose;
       this.showMoviePop = item.choose;

@@ -9,7 +9,8 @@ const state = {
   loginstaus: localStorage.getItem('loginstaus'),
   username: 'test',
   password: '1121',
-  navNum:'首页'
+  navNum:'首页',
+  link:"Bressanone.mp3",
 }
 
 export default new Vuex.Store({
