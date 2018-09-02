@@ -4,12 +4,24 @@
   <ul>
     <li v-for="item in 6" :key="item.id">haa</li>
   </ul>
+  <p @click="haa">haaaaaa......</p>
 </div>
 </template>
 <script>
 export default {
   data() {
     return {};
+  },
+  methods:{
+    haa(){
+      let config = {
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          withCredentials: true
+        };
+      this.$axios.get("/users",config).then(res => {
+        console.log(res.data.data.data[0].username)
+      })
+    }
   }
 };
 </script>

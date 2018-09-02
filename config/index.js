@@ -5,7 +5,14 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      "/users":{
+        target:"http://localhost:3000"
+      },
+      "/users/*":{
+        target:"http://localhost:3000"
+      },
+    },
     host: 'localhost',
     port: 7080,
     autoOpenBrowser: true,
