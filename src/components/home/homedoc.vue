@@ -14,11 +14,7 @@ export default {
   },
   methods:{
     haa(){
-      let config = {
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          withCredentials: true
-        };
-      this.$axios.get("/users",config).then(res => {
+      this.$axios.get("/users").then(res => {
         console.log(res.data.data.data[0].username)
       })
     }
