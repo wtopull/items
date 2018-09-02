@@ -16,6 +16,7 @@
   </div>
 </template>
 <script>
+
 import {musicList} from '../music/musicList.js';
 export default {
   data() {
