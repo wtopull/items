@@ -15,7 +15,7 @@ export default {
   methods:{
     haa(){
       this.$axios.get("/users").then(res => {
-        console.log(res.data.data.data[0].username)
+        console.log(res)
       })
     }
   }

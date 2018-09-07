@@ -16,24 +16,39 @@
 export default {
   data() {
     return {
-      username: "",
-      password: ""
+      username: "huiyuan101",
+      password: "11211121"
     };
   },
   methods:{
     login(){
-      if(this.username === this.$store.state.username && this.password === this.$store.state.password){
-        this.$loading.show({number:"a"});
-        setTimeout(() => {
-          this.$router.push("/home");
-          localStorage.setItem("loginstaus",true);
-          this.$loading.hide();
-        },1000)
-      }else if(this.username !== this.$store.state.username){
-        this.$pop.show({ error: "", title: "温馨提示", content: "您输入的账号不存在", content1: '', content2: '', number: 1 });
-      }else if(this.password !== this.$store.state.password){
-        this.$pop.show({ error: "", title: "温馨提示", content: "您输入的密码不正确", content1: '', content2: '', number: 1 });
-      }
+      let config = {
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        withCredentials: true
+      };
+      // let formData = new FormData();
+      // formData.append("username", this.username);
+      // formData.append("password", this.password);
+      let requestParam = JSON.stringify({
+        username: this.username,
+        password: this.password,
+      });
+      this.$axios.post("/users/login",requestParam,config).then(res => {
+        console.log(121324654654564654)
+      });
+
+      // if(this.username === this.$store.state.username && this.password === this.$store.state.password){
+      //   this.$loading.show({number:"a"});
+      //   setTimeout(() => {
+      //     this.$router.push("/home");
+      //     localStorage.setItem("loginstaus",true);
+      //     this.$loading.hide();
+      //   },1000)
+      // }else if(this.username !== this.$store.state.username){
+      //   this.$pop.show({ error: "", title: "温馨提示", content: "您输入的账号不存在", content1: '', content2: '', number: 1 });
+      // }else if(this.password !== this.$store.state.password){
+      //   this.$pop.show({ error: "", title: "温馨提示", content: "您输入的密码不正确", content1: '', content2: '', number: 1 });
+      // }
     }
   }
 };

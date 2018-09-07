@@ -1,7 +1,7 @@
 <template >
   <div class="head">
     <ul class="headTitle">
-      <li><i class="iconfont icon-left" v-if="$route.name !== 'Home'" @click="toHome"></i></li>
+      <li><i class="iconfont icon-left" v-if="$route.name !== 'Home' && $route.name !== 'My'" @click="toHome"></i></li>
       <li><span class="span">{{$t('navs.'+$route.name)}}</span></li>
       <li><langs></langs></li>
     </ul>

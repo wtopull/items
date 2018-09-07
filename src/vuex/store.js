@@ -7,7 +7,8 @@ Vue.use(Vuex)
 
 const state = {
   loginstaus: localStorage.getItem('loginstaus'),
-  username: 'test',
+  username: '',
+  nickname:'',
   password: '1121',
   navNum:'首页',
   link:"Bressanone.mp3",
