@@ -23,12 +23,9 @@ export default {
   methods:{
     login(){
       let config = {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { "Content-Type": "application/json" },
         withCredentials: true
       };
-      // let formData = new FormData();
-      // formData.append("username", this.username);
-      // formData.append("password", this.password);
       let requestParam = JSON.stringify({
         username: this.username,
         password: this.password,
