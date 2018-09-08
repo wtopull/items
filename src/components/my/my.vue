@@ -39,7 +39,7 @@ export default {
   },
   methods:{
     getUserInfo(){
-      this.$axios.get("/users").then(res => { 
+      this.$axios.get("/users").then(res => {
         this.$store.state.username = res.data.data.data[0].username;
         this.$store.state.nickname = res.data.data.data[0].nicknume;
       })
