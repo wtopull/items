@@ -6,18 +6,18 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      "/users":{
-        target:"http://qt.dd0519.cn:3000"
-      },
-      "/users/*": {
-        target: "http://qt.dd0519.cn:3000"
-      },
-      // "/users": {
-      //   target: "http://127.0.0.1:3000"
+      // "/users":{
+      //   target:"http://qt.dd0519.cn:3000"
       // },
-      // "/users/*":{
-      //   target:"http://127.0.0.1:3000"
+      // "/users/*": {
+      //   target: "http://qt.dd0519.cn:3000"
       // },
+      "/users": {
+        target: "http://127.0.0.1:3000"
+      },
+      "/users/*":{
+        target:"http://127.0.0.1:3000"
+      },
     },
     host: 'localhost',
     port: 7080,
