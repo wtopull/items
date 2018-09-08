@@ -4,9 +4,14 @@
   background: #ddd;
   overflow: hidden;
   overflow-x: scroll;
+  position: fixed;
+  top: 46px;
+  left: 0;
+  z-index: 110;
   & ul {
     width: 380px;
     height: 36px;
+    background: #ddd;
     & li {
       width: 76px;
       height: 36px;

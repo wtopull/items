@@ -37,4 +37,5 @@ export default {
 </script>
 <style lang='scss' scoped>
 @import "../home/homemovie.scss";
+@import "./listm.scss";
 </style>

@@ -4,14 +4,17 @@
       <div class="img">
         <img src="/static/img/6.jpg" alt="">
       </div>
-      <div>
+      <div class="details">
         <p><span>账号：</span>{{$store.state.username}}</p>
         <p><span>昵称：</span>{{$store.state.nickname}}</p>
       </div>
     </div>
     <div class="myList">
       <ul>
-        <li v-for="item in 6">ii</li>
+        <li v-for="item in lists">
+          <span><i class="iconfont" :class="item.icon"></i>{{item.name}}</span>
+          <i class="you iconfont icon-you"></i>
+        </li>
       </ul>
     </div>
   </div>
@@ -24,7 +27,10 @@ export default {
       username:"huiyuan101",
       password:"11211121",
       lists:[
-        {}
+        {"name":"会员中心","icon":"icon-cash"},
+        {"name":"安全设置","icon":"icon-creditcard"},
+        {"name":"消息管理","icon":"icon-laba"},
+        {"name":"设置","icon":"icon-lock"},
       ]
     }
   },
@@ -35,6 +41,7 @@ export default {
     getUserInfo(){
       this.$axios.get("/users").then(res => {
         res.data.data.data.forEach(item => {
+          console.log(item)
           if(item.username != this.username){
             console.log("账号不存在！");
           }else if(item.password != this.password){
