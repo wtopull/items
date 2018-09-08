@@ -40,14 +40,6 @@ export default {
   methods:{
     getUserInfo(){
       this.$axios.get("/users").then(res => {
-        res.data.data.data.forEach(item => {
-          console.log(item)
-          if(item.username != this.username){
-            console.log("账号不存在！");
-          }else if(item.password != this.password){
-            console.log("密码错误！");
-          }
-        });
         this.$store.state.username = res.data.data.data[0].username;
         this.$store.state.nickname = res.data.data.data[0].nicknume;
       })
