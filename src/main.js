@@ -13,6 +13,8 @@ import VueAxios from 'vue-axios'
 import popTo from "./components/public/pop"
 import Loading from "./components/public/loading"
 import i18n from './i18n/i18n'
+//富文本https://github.com/davidroyer/vue2-editor
+import {VueEditor,Quill} from "vue2-editor"
 
 Vue.use(popTo);
 Vue.use(Loading);

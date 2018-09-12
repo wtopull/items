@@ -12,6 +12,7 @@ import listv from '@/components/movie/listv.vue'
 import video from '@/components/movie/video.vue'
 import music from '@/components/music/music.vue'
 import audio from '@/components/music/audio.vue'
+import other from '@/components/other/other.vue'
 import my from '@/components/my/my.vue'
 
 Vue.use(Router)
@@ -76,6 +77,11 @@ export default new Router({
               component:audio
             }
           ]
+        },
+        {
+          path:"other",
+          name:"Other",
+          component:other
         },
         {
           path: 'my',

@@ -165,3 +165,10 @@
 	
 	{{$t('navs.Home')}}
 	{{$t('navbar[1].children[0].component')}}
+	
+# 富文本 #	
+
+https://github.com/davidroyer/vue2-editor
+
+	npm install --save vue2-editor
+	import { VueEditor, Quill } from "vue2-editor";

@@ -37,4 +37,18 @@ dl {
 a {
   text-decoration: none;
 }
+
+.quillWrapper.ql-snow.ql-toolbar{
+    padding: 4px !important;
+}
+.ql-toolbar.ql-snow{
+    padding: 4px !important;
+}
+.quillWrapper .ql-toolbar.ql-snow .ql-formats{
+  margin: 0 !important;
+}
+.ql-editor{
+  min-height: 100px !important;
+  padding: 10px !important;
+}
 </style>

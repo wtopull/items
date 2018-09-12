@@ -12,6 +12,7 @@ const state = {
   password: '1121',
   navNum:'首页',
   link:"Bressanone.mp3",
+  conArr:[]
 }
 
 export default new Vuex.Store({
