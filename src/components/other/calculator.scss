@@ -1,0 +1,23 @@
+.calculator,
+table {
+  width: 100%;
+  overflow: hidden;
+}
+table{
+  margin-top:10px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  text-align: center;
+}
+.set{
+  & li{
+    margin-left: 12px;
+    line-height: 24px;
+    float: left;
+    margin-bottom: 10px;
+    & input{
+      width: 40px;
+      text-align: center;
+    }
+  }
+}

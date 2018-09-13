@@ -20,6 +20,7 @@ export default {
 html,
 body,#app {
   width: 100%;
+  min-width: 320px;
   height: 100%;
 }
 body {

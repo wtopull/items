@@ -1,3 +1,17 @@
-.other{
-    
+.other {
+  width: 100%;
+  & .list {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+    border-bottom: 1px solid #ddd;
+    & li {
+      display: inline-block;
+      line-height: 36px;
+      padding:0px 6px;
+    }
+    & li.active{
+      background: #ddd;
+    }
+  }
 }

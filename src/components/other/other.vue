@@ -1,23 +1,34 @@
 <template>
   <div class="other overflow">
-    <editor>editor</editor>
+    <ul class="list">
+      <li :class="index == k ? 'active' : ''" v-for="(item,index) in list" @click="listBall(index)">{{item}}</li>
+    </ul>
+    <calculator v-if="k == 0"></calculator>
+    <editor v-if="k == 1">editor</editor>
   </div>
 </template>
 <script>
-import editor from './editor.vue'
+import calculator from "./calculator.vue";
+import editor from "./editor.vue";
 export default {
   data() {
-    return {};
+    return {
+      k: 0,
+      list: ["综合计算器", "富文本"]
+    };
   },
-  computed: {},
-  mounted() {},
-  methods: {},
+  methods: {
+    listBall(index) {
+      this.k = index;
+    }
+  },
   components: {
-    editor
+    editor,
+    calculator
   },
   filters: {}
 };
 </script>
 <style scoped lang="scss">
-@import './other.scss'
+@import "./other.scss";
 </style>
