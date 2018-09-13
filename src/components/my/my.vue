@@ -11,7 +11,7 @@
     </div>
     <div class="myList">
       <ul>
-        <li v-for="item in lists">
+        <li v-for="item in lists" @click="Tolist">
           <span><i class="iconfont" :class="item.icon"></i>{{item.name}}</span>
           <i class="you iconfont icon-you"></i>
         </li>
@@ -43,6 +43,9 @@ export default {
         this.$store.state.username = res.data.data.data[0].username;
         this.$store.state.nickname = res.data.data.data[0].nicknume;
       })
+    },
+    Tolist(){
+      console.log("haa");
     }
   }
 };
