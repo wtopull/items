@@ -5,6 +5,7 @@ import App from './App'
 //共用样式文件
 import '@/assets/scss/public.css'
 import '@/assets/iconfont/iconfont.css'
+// import '@/assets/scss/md.css'
 
 import router from './router'
 import store from './vuex/store'
@@ -16,6 +17,18 @@ import i18n from './i18n/i18n'
 //富文本https://github.com/davidroyer/vue2-editor
 import {VueEditor,Quill} from "vue2-editor"
 
+
+import VueMarkdown from 'vue-markdown';
+Vue.component('vue-markdown', VueMarkdown);
+import hljs from 'highlight.js'
+import 'highlight.js/styles/googlecode.css'
+
+Vue.directive('highlight', (el) => {
+  let blocks = el.querySelectorAll('pre code')
+  blocks.forEach((block) => {
+    hljs.highlightBlock(block)
+  })
+})
 Vue.use(popTo);
 Vue.use(Loading);
 axios.defaults.withCredentials = true

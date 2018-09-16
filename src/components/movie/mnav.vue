@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import {moviedoc} from './movie'
+import { moviedoc } from "./movie";
 export default {
   data() {
     return {
@@ -14,10 +14,10 @@ export default {
     };
   },
   methods: {
-    change(item){
-      moviedoc.map(c =>{
+    change(item) {
+      moviedoc.map(c => {
         c.choose = false;
-      })
+      });
       if (item === "电影" || item === "Movie" || item === "映画") {
         this.navNum = item;
         this.$router.push("/listm");
@@ -30,7 +30,11 @@ export default {
       } else if (item === "好评" || item === "Praise" || item === "好評の") {
         this.navNum = item;
         this.$router.push("/listp");
-      } else if (item === "综艺" || item === "Variety" || item === "バラエティ") {
+      } else if (
+        item === "综艺" ||
+        item === "Variety" ||
+        item === "バラエティ"
+      ) {
         this.navNum = item;
         this.$router.push("/listv");
       }

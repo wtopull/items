@@ -100,7 +100,7 @@ export default {
               this.alls[k].profit = (this.alls[k].bonus - this.alls[k].principal) * this.profitBonus;
               this.money ++;
             }
-            console.log(k);
+            // console.log(k);
             
           }
         }
