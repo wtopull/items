@@ -7,7 +7,7 @@
 export default {
   data() {
     return {
-      mdText: ""
+      mdText: "",
     };
   },
   props: ["src"],
