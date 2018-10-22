@@ -7,10 +7,17 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       // "/users":{
+<<<<<<< HEAD
       //   target:"http://qt.dd0519.cn"
       // },
       // "/users/*": {
       //   target: "http://qt.dd0519.cn"
+=======
+      //   target:"http://111.231.207.167:3000"
+      // },
+      // "/users/*": {
+      //   target: "http://111.231.207.167:3000"
+>>>>>>> 7ca61d44fc2ee7e90f3a616f6baa47692c09f1dd
       // },
       "/users": {
         target: "http://127.0.0.1:3000"
@@ -18,12 +25,15 @@ module.exports = {
       "/users/*":{
         target:"http://127.0.0.1:3000"
       },
+<<<<<<< HEAD
       "/logins": {
         target: "http://127.0.0.1:3000"
       },
       "/logins/*": {
         target: "http://127.0.0.1:3000"
       },
+=======
+>>>>>>> 7ca61d44fc2ee7e90f3a616f6baa47692c09f1dd
     },
     host: 'localhost',
     port: 7080,

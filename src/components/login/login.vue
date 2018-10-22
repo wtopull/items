@@ -30,8 +30,14 @@ export default {
         username: this.username,
         password: this.password,
       });
+<<<<<<< HEAD
       this.$axios.post("/logins",requestParam,config).then(res => {
         console.log(res)
+=======
+      this.$axios.post("/users/login",requestParam,config).then(res => {
+        console.log('12132465465');
+        console.log(res);
+>>>>>>> 7ca61d44fc2ee7e90f3a616f6baa47692c09f1dd
       });
 
       // if(this.username === this.$store.state.username && this.password === this.$store.state.password){
