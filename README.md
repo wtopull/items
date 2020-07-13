@@ -96,19 +96,6 @@
 1. JSON.parse(res.data);
 2. JSON.stringify(res.data);
 
-# localStorage使用 #
-
-1. 获取键值对数量
-	localStorage.length
-2. 读取
-	localStorage.getItem('name'), localStorage.key(i)
-3. 添加/修改
-	localStorage.setItem('name','xuanyuan')
-4. 删除对应键值
-	localStorage.removeItem('name')
-5. 删除所有数据
-	localStorage.clear()
-
 # cookie封装 #
 
 	@/assets/js/utils.js
